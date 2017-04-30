@@ -6,11 +6,19 @@ if (isset($_GET['number']) === false) {
     exit;
 }
 
+
+// Если теста с номером, переданным в GET-запросе, не существует, то отобразить 404 ошибку  
+if (!isset(glob('tests/*.json')[$_GET['number']])) {
+    header('HTTP/1.0 404 Not Found');
+    exit;
+}
+
 // Получаем файл с номером из GET-запроса
 $allTests = glob('tests/*.json');
 $number = $_GET['number'];
 $test = file_get_contents($allTests[$number]);
 $test = json_decode($test, true);
+
 
 // Если была нажата кнопка проверки теста, то проверить и вывести результат
 if (isset($_POST['check-test'])) {
