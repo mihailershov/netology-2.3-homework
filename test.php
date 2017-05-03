@@ -143,7 +143,7 @@ if (isset($_POST['download-picture'])) {
             <h2>Ваш сертификат, <?php echo $username ?>: </h2>
             <img src="img/result.png" alt="Сертификат">
             <form method="POST">
-                <input type="submit" name="download-picture" id="download-picture">
+                <input type="submit" name="download-picture" id="download-picture" value="Скачать">
             </form>
         <?php endif; ?>
     </div>
