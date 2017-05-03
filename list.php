@@ -31,6 +31,8 @@
 
         <?php endforeach; ?>
     <?php endif; ?>
+
+    <!-- Если файлов нету, то сообщить об этом -->
     <?php if (empty($allFiles)) echo 'Пока не загружено ни одного теста';?>
 
 </body>

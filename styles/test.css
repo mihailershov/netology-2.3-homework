@@ -33,6 +33,7 @@ input[type=radio] {
 
 fieldset {
     margin: 20px 0;
+    position: relative;
 }
 
 .check-test {
@@ -52,4 +53,35 @@ fieldset {
 hr {
     padding: 0;
     margin: 0;
+}
+
+.on-hidden-radio {
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    top: 30%;
+    z-index: 2;
+    left: 10%;
+    opacity: 0;
+}
+
+#hidden-radio {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    opacity: 0;
+}
+
+img {
+    width: 500px;
+    height: auto;
+    display: inline-block;
+}
+
+#download-picture {
+    padding: 5px;
+    display: block;
+    height: 40px;
+    margin: 0 0 100px;
+    width: 500px;
 }
