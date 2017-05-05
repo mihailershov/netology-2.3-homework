@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/list.css">
 </head>
 <body>
-    <a href="index.php" class="back"><div>< Назад</div></a>
+    <a href="index.php" class="back"><div>&lt; Назад</div></a>
     <h2>Все тесты</h2>
     <hr>
 

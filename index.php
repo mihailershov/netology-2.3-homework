@@ -46,7 +46,7 @@ if (isset($_POST['upload'])) {
 <!-- Если файл был отправлен, то выводить информацию о файле и уведомление об успешной загрузке/ошибке -->
 
 <?php if (isset($_POST['upload'])): ?>
-    <a href="<?php $_SERVER['HTTP_REFERER'] ?>"><div>< Назад</div></a>
+    <a href="<?php $_SERVER['HTTP_REFERER'] ?>"><div>&lt; Назад</div></a>
     <?php echo $result; ?><br>
     <h1>Вы будете перенаправлены на страницу с тестами через 3 секунды...</h1>
 <?php endif; ?>
@@ -83,9 +83,9 @@ if (isset($_POST['upload'])) {
                 <p>Ответ 4: </p><input type="text" name="answer4" class="answer"><br>
                 <p class="correct-answer-p">Правильный ответ:</p>
                 <div class="correct-answer">
-                    1<input type="radio" name="radiobutton" class="first-correct">&nbsp&nbsp;&nbsp;
-                    2<input type="radio" name="radiobutton" class="second-correct">&nbsp&nbsp&nbsp;
-                    3<input type="radio" name="radiobutton" class="third-correct">&nbsp&nbsp;&nbsp;
+                    1<input type="radio" name="radiobutton" class="first-correct">&nbsp;&nbsp;&nbsp;
+                    2<input type="radio" name="radiobutton" class="second-correct">&nbsp;&nbsp;&nbsp;
+                    3<input type="radio" name="radiobutton" class="third-correct">&nbsp;&nbsp;&nbsp;
                     4<input type="radio" name="radiobutton" class="fourth-correct">
                 </div>
             </div>
