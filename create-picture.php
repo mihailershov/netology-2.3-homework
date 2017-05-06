@@ -1,12 +1,14 @@
 <?php
 
-// Декодируем json файл, достаем нужные данные
-$array = json_decode(file_get_contents('userinfo.json'));
-$username = $array[0];
-$testname = $array[1];
-$correct = $array[2];
-$date = $array[3];
-unlink('userinfo.json');
+header('Content-type: image/png');
+
+$testname = $_POST['testname'];
+$username = $_POST['username'];
+$date = $_POST['date'];
+$correctAnswers = $_POST['correctAnswers'];
+$totalAnswers = $_POST['totalAnswers'];
+
+$correct = $correctAnswers . ' из ' . $totalAnswers;
 
 // Создаем картинку и цвет шрифта
 $img = imagecreatefromjpeg('img/picture.jpg');
@@ -25,6 +27,5 @@ imagettftext($img, 200, 0, 1600, 1625, $white, 'fonts/OpenSans.ttf', $testname);
 imagettftext($img, 180, 0, 1600, 1976   , $white, 'fonts/OpenSans.ttf', $correct);
 imagettftext($img, 180, 0, 1600, 2325, $white, 'fonts/OpenSans.ttf', $date);
 
-// Возвращаем картинку
-imagepng($img, 'img/result.png');
+imagepng($img);
 imagedestroy($img);
